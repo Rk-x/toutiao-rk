@@ -3,6 +3,9 @@
     <!--路由的出口-->
     <router-view></router-view>
     <h1>偷笑</h1>
+    <div>
+      <i class="toutiao rk-shouye"></i>
+    </div>
   </div>
 </template>
 
