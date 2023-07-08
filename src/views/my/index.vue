@@ -72,23 +72,23 @@
 </template>
 
 <script>
-import { mapState,mapGetters  } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
-  name: "MyIndex",
+  name: 'MyIndex',
   components: {},
   props: {},
-  data() {
+  data () {
     return {
-    };
+    }
   },
   computed: {
     ...mapGetters(['user'])
   },
   watch: {},
-  created() {},
-  mounted() {},
-  methods: {},
-};
+  created () {},
+  mounted () {},
+  methods: {}
+}
 </script>
 
 <style scoped lang="less">
@@ -164,11 +164,11 @@ export default {
           font-size: 23px;
         }
         .count {
-          
+
           font-size: 36px;
         }
       }
-    }  
+    }
   }
   .grid-nav{
       .grid-item{

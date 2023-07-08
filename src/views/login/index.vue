@@ -109,7 +109,7 @@ export default {
         this.$store.commit('setUser', data.data)
 
         this.$toast.success('登录成功')
-        //跳转回原来页面
+        // 跳转回原来页面
         this.$router.back()
       } catch (err) {
         if (err.response.status === 400) {
