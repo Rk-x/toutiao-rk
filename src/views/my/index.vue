@@ -60,7 +60,7 @@
 
     <van-cell title="消息通知" is-link url="" />
     <van-cell title="小智同学" is-link url="" />
-    <van-cell v-if="user" title="退出登录" class="lgout-cell" />
+    <van-cell v-if="user" @click="lgout"  title="退出登录" class="lgout-cell" />
 
     <!-- <van-cell title="消息通知" is-link url="" />
     <van-cell title="实名认证" is-link url="" />
@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'MyIndex',
   components: {},
@@ -82,12 +82,17 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['user'])
+    ...mapState(['user'])
   },
   watch: {},
   created () {},
   mounted () {},
-  methods: {}
+  methods: {
+    lgout () {
+      window.localStorage.removeItem('TOUTIAO_USER')
+      location.reload()
+    }
+  }
 }
 </script>
 
